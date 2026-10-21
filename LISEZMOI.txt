@@ -1,0 +1,14 @@
+ORÉE · PAQUET D'HÉBERGEMENT
+
+Contenu : index.html (l'application), sw.js (hors-ligne), i18n- (traductions), pro- (manifestes, icônes, PDF).
+
+Mise en ligne, au choix :
+1. Netlify (gratuit) : app.netlify.com > "Add new site" > "Deploy manually" > glisser le dossier entier. Adresse https immédiate ; nom de domaine personnalisé possible.
+2. GitHub Pages (gratuit) : déposer les fichiers dans un dépôt, activer Pages.
+3. Hébergeur classique (OVH, o2switch, Infomaniak...) : envoyer le contenu du dossier à la racine du site, par FTP. Le site doit être en https (certificat Let's Encrypt, inclus chez tous ces hébergeurs).
+
+Le dossier doit être servi tel quel, à la racine d'un domaine ou sous-domaine (ex. https://oree.fr/ ou https://app.oree.fr/), pas dans un sous-dossier, sinon le hors-ligne et les icônes ne fonctionnent pas.
+
+À chaque nouvelle version : remplacer les fichiers, et changer la ligne V='oree-vNNN' dans sw.js (le numéro de version), sinon les téléphones gardent l'ancienne version.
+
+Vérification après mise en ligne : ouvrir l'adresse sur un téléphone, "Garder Orée sur mon téléphone", cocher "Icône discrète" si souhaité, ajouter à l'écran d'accueil, puis couper le wifi et les données : l'application doit s'ouvrir quand même.
